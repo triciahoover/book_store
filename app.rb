@@ -20,13 +20,11 @@ end
 post '/search' do
 	title = params[:title]
 	book = db.exec("select * from book_table where title = '#{title}'")
-	session[:book1] = book[0]
-	session[:book2] = book[1]
+	session[:book] = book[0]
 	redirect '/results'
 end
 
 get '/results' do
-	book1 = session[:book1]
-	book2 = session[:book2]
-	erb :results, :locals => {:book1 => book1, :book2 => book2}
+	book= session[:book]
+	erb :results, :locals => {:book => book}
 end
