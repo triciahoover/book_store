@@ -1,0 +1,25 @@
+Thank you for your search!
+<br>
+This is what we found in the database:
+<br>
+<br>
+<table>
+	<tr><!--  #keeps all on same row -->
+		<th>Title</th> <!-- #gives bold look as header <th> -->
+		<th>ISBN</th>
+		<th>Quantity</th>
+		<th>Price</th>
+	</tr>
+	<tr>
+		<td><%=book1['title']%></td> <!-- #td tags create data fields under headers above -->
+		<td><%=book1['isbn']%></td>
+		<td><%=book1['quantity']%></td>
+		<td><%=book1['price']%></td>
+	</tr>
+	<tr>
+		<td><%=book2['title']%></td> <!-- #td tags create data fields under headers above -->
+		<td><%=book2['isbn']%></td>
+		<td><%=book2['quantity']%></td>
+		<td><%=book2['price']%></td>
+	</tr>
+</table>
